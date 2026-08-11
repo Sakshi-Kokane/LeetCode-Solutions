@@ -13,12 +13,12 @@ class Solution {
                 break;
             }
         }
-        HashSet<Integer> set = new HashSet<>();
+        boolean[] present = new boolean[210];
             for(int num : nums)
             {
-                set.add(num);
+                present[num]=true;
             }
-            while(set.contains(sum))
+            while(sum<present.length && present[sum])
             {
                 sum++;
             }
