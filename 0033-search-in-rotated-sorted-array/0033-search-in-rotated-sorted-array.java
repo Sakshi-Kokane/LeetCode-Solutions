@@ -5,14 +5,6 @@ class Solution {
         int low = 0;
         int high = n-1;
         int mid;
-        if(n==1)
-        {
-            if(nums[0]==target)
-            {
-                return 0;
-            }
-            return -1;
-        }
         while(low<=high)
         {
             mid = (low+high)/2;
