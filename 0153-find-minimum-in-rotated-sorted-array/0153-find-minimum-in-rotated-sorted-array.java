@@ -4,11 +4,7 @@ class Solution {
         int n = nums.length;
         int low=0;
         int high = n-1;
-        int min=Integer.MAX_VALUE;
-        if(n==1)
-        {
-            return nums[0];
-        }    
+        int min=Integer.MAX_VALUE;   
         int mid;
         while(low<=high)
         {
