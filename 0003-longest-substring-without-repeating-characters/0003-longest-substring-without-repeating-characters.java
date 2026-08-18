@@ -2,6 +2,10 @@ class Solution {
     public int lengthOfLongestSubstring(String s) 
     {
         int n  = s.length();
+        if(n<=1)
+        {
+            return n;
+        }
         int maxlen = 0;
         int[] hash=new int[256];
         for(int i=0; i<256; i++)
