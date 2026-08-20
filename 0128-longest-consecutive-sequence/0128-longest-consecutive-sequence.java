@@ -17,7 +17,7 @@ class Solution {
             if(!set.contains(x-1))
             {
                 int cnt=1;
-                int item=x;
+                //int item=x;
                 while(set.contains(x+1))
                 {
                     x=x+1;
