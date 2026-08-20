@@ -4,7 +4,7 @@ class Solution {
         int n = nums.length;
         Arrays.sort(nums);
         int maxCount=0;
-        int count=1;
+        int count=0;
         int last=Integer.MIN_VALUE;
         for(int i=0; i<n; i++)
         {
