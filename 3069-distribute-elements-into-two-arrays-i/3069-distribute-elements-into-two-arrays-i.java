@@ -20,15 +20,14 @@ class Solution {
             }
         }
         int result[] = new int[n];
-        int k=0;
-        for(k=0; k<=i; k++)
+        int index=0;
+        for(int k=0; k<=i; k++)
         {
-            result[k]=arr1[k];
+            result[index++]=arr1[k];
         }
-        int p=0;
-        for(int s=k; s<=k+j; s++)
+        for(int k=0; k<=j; k++)
         {
-            result[s]=arr2[p++];
+            result[index++]=arr2[k];
         }
         return result;
     }
