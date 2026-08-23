@@ -1,0 +1,39 @@
+class Solution {
+    public boolean sumGame(String num) 
+    {
+        int n = num.length();
+        int half=n/2;
+        int leftsum=0;
+        int rightsum=0;
+        int leftQ=0;
+        int rightQ=0;
+        for(int i=0; i<half; i++)
+        {
+            if(num.charAt(i)=='?')
+            {
+                leftQ++;
+            }
+            else
+            {
+                leftsum+=num.charAt(i)-'0';
+            }
+        }
+        for(int i=half; i<n; i++)
+        {
+            if(num.charAt(i)=='?')
+            {
+                rightQ++;
+            }
+            else
+            {
+                rightsum+=num.charAt(i)-'0';
+            }
+        }
+        int diff = leftsum-rightsum;
+        int qDiff = leftQ - rightQ;
+        if ((leftQ + rightQ) % 2 != 0) {
+            return true;
+        }
+        return diff + (qDiff / 2) * 9 != 0;
+    }
+}
