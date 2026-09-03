@@ -4,8 +4,7 @@ class Solution {
         int maxCount=0;
         for(String str : sentences)
         {
-            String word[] = str.split(" ");
-            maxCount=Math.max(maxCount, word.length);
+            maxCount=Math.max(maxCount, str.split(" ").length);
         } 
         return maxCount;   
     }
