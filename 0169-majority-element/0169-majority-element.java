@@ -1,4 +1,5 @@
-class Solution {
+class Solution 
+{
     public int majorityElement(int[] nums) 
     {
         int count=0;
@@ -8,18 +9,17 @@ class Solution {
             if(count==0)
             {
                 element=num;
+                count++;
             }
-            if(num==element)
+            else if(element==num)
             {
                 count++;
             }
-            else if(num!=element)
+            else
             {
                 count--;
             }
-
         }
-        
         return element;
     }
 }
