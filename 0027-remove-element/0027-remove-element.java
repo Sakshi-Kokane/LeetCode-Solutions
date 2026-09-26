@@ -1,13 +1,15 @@
-class Solution {
+class Solution 
+{
     public int removeElement(int[] nums, int val) 
     {
+        int n = nums.length;
         int i=0;
-        int j=nums.length-1;
+        int j=n-1;
         while(i<=j)
         {
-            while(j>=0 && nums[j]==val)
+            while(j>=i && nums[j]==val)
             {
-                 j--;
+                j--;
             }
             if(i>j)
             {
@@ -15,11 +17,13 @@ class Solution {
             }
             if(nums[i]==val)
             {
+                
                 nums[i]=nums[j];
                 j--;
             }
             i++;
         }
         return i;
+        
     }
 }
