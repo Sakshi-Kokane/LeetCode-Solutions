@@ -1,4 +1,5 @@
-class Solution {
+class Solution 
+{
     public void moveZeroes(int[] nums) 
     {
         int n = nums.length;
@@ -12,7 +13,6 @@ class Solution {
                 nums[j]=temp;
                 j++;
             }
-           
         }
     }
 }
