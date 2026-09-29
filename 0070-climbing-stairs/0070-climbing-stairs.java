@@ -1,26 +1,20 @@
 class Solution 
 {
-    int dp[];
-    int f(int idx)
+    
+    public int climbStairs(int n) 
     {
-        if(idx==0 || idx==1)
+        if(n<=1)
         {
             return 1;
         }
-        if(dp[idx]!=-1)
+        int prev1=1;
+        int prev2=1;
+        for(int i=2; i<=n; i++)
         {
-            return dp[idx];
+            int curr = prev1 + prev2;
+            prev2=prev1;
+            prev1=curr;
         }
-        int left = f(idx-1);
-        int right = f(idx-2);
-        dp[idx]=left+right;
-        return dp[idx];
-        
-    }
-    public int climbStairs(int n) 
-    {
-        dp = new int[n+1];
-        Arrays.fill(dp, -1);
-        return f(n);
+        return prev1;
     }
 }
