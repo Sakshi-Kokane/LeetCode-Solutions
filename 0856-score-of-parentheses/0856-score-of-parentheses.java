@@ -4,17 +4,16 @@ class Solution
     {
         Stack<Integer> stack = new Stack<>();
         stack.push(0);
-
         for(char ch : s.toCharArray())
         {
-            if(ch=='(')
+            if(ch == '(')
             {
                 stack.push(0);
             }
             else
             {
                 int inside = stack.pop();
-                int score;
+                int score=0;
                 if(inside==0)
                 {
                     score=1;
